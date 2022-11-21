@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a7515d20f0.js" crossorigin="anonymous"></script>
+    <title>My Electron App</title>
+  </head>
+  <body>
+    <nav  class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand d-md-none d-xs-block py-3" href="#">
+          <img src="" height="40" alt="Company Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+     
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto">
+            <li v-if="!$route.meta.hideNavbar" class="nav-item">
+              <a class="nav-link mx-2 active" aria-current="page" href="/">Home</a>
+            </li>
+            
+            <!-- Dashboard navigation -->
+            <li v-if="$route.meta.hideNavbar" class="nav-item">
+              <a class="nav-link mx-2 active" aria-current="page" href="/dashboard">DashBoard</a>
+            </li>
+            <div v-if="$route.meta.hideNavbar" class="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Customers
+              </a>
+    
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="/customers">View All</a></li>
+                <li><a class="dropdown-item" href="/customer-form">Add</a></li>
+              </ul>
+            </div>
+            <div v-if="$route.meta.hideNavbar" class="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Products
+              </a>
+    
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="/products">View All</a></li>
+                <li><a class="dropdown-item" href="/product-form">Add</a></li>
+              </ul>
+            </div>
+            <div v-if="$route.meta.hideNavbar" class="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Carts
+              </a>
+    
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="/carts">View All</a></li>
+                <li><a class="dropdown-item" href="/cart-form">Add</a></li>
+              </ul>
+            </div>
+            <div v-if="$route.meta.hideNavbar" class="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Orders
+              </a>
+    
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="/orders">View All</a></li>
+                <li><a class="dropdown-item" href="/orders-form">Add</a></li>
+              </ul>
+            </div>
+            <!-- Dashboard Navigation -->
+            <li v-if="!$route.meta.hideNavbar" class="nav-item">
+              <a class="nav-link mx-2" href="/about">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h1>Keyz's Desktop Application</h1>
+    <!-- <p>Current theme source: <strong id="theme-source">System</strong></p>
+
+    <button id="toggle-dark-mode">Toggle dark mode</button>
+    <button id="reset-to-system">Reset to System Theme</button> -->
+
+    <p class="fa-solid fa-fade" style="--fa-animation-duration: 3s; --fa-fade-opacity: 0.6">Try typing something below.</p>
+    <div class="fa-3x"> 
+      <i class="fa-solid fa-i-cursor fa-fade" style="--fa-animation-duration: 3s; --fa-fade-opacity: 0.6"></i>
+      <input type="text" placeholder="type here">
+    </div>
+    <!-- <div style="border:2px solid black;border-radius:3px;padding:5px;display:inline-block" draggable="true" id="drag1">Drag me - File 1</div>
+    <div style="border:2px solid black;border-radius:3px;padding:5px;display:inline-block" draggable="true" id="drag2">Drag me - File 2</div> -->
+
+    <script src="renderer.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
